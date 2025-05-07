@@ -1,0 +1,33 @@
+ErrorDocument 404 /mysite-practise/404_not_found/index.html
+
+<If "%{REQUEST_URI} =~ m#^/mysite\-practise/wp\-content/plugins/wordpress\-seo/css/main\-sitemap\.xsl#i">
+  ForceType "application/xml"
+</If>
+
+<If "%{REQUEST_URI} =~ m#^/mysite\-practise/feed/#i">
+  ForceType "application/rss+xml; charset=UTF-8"
+</If>
+
+<If "%{REQUEST_URI} =~ m#^/mysite\-practise/comments/feed/#i">
+  ForceType "application/rss+xml; charset=UTF-8"
+</If>
+
+<If "%{REQUEST_URI} =~ m#^/mysite\-practise/wp\-json/#i">
+  ForceType "application/json; charset=UTF-8"
+</If>
+
+<If "%{REQUEST_URI} =~ m#^/mysite\-practise/author/maha/feed/#i">
+  ForceType "application/rss+xml; charset=UTF-8"
+</If>
+
+<If "%{REQUEST_URI} =~ m#^/mysite\-practise/sample\-page/feed/#i">
+  ForceType "application/rss+xml; charset=UTF-8"
+</If>
+
+<If "%{REQUEST_URI} =~ m#^/mysite\-practise/2025/05/06/hello\-world/feed/#i">
+  ForceType "application/rss+xml; charset=UTF-8"
+</If>
+
+<If "%{REQUEST_URI} =~ m#^/mysite\-practise/category/uncategorized/feed/#i">
+  ForceType "application/rss+xml; charset=UTF-8"
+</If>
